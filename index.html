@@ -5,7 +5,9 @@
   </head>
   <body>
     <script>
-
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
